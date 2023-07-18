@@ -244,7 +244,7 @@ export class ChatGPTApi implements LLMApi {
 
     return {
       used: response.total_usage,
-      total: total.hard_limit_usd,
+      total: total.hard_limit_usd ? total.hard_limit_usd * 2 : 0,
     } as LLMUsage;
   }
 
